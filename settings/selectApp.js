@@ -10,7 +10,19 @@ y.forEach(element => {
 
 });
 
+let hideDiv = document.querySelectorAll('.hidingP');
+hideDiv.forEach(eleme => {
+    eleme.addEventListener('click', () => {
+        eleme.nextElementSibling.classList.toggle('hide');
+    })
+})
+
+
+
+
+/*
 let hideDiv = document.querySelector('#displayDiv');
 hideDiv.addEventListener('click', () => {
    document.querySelector('#optionsDiv').classList.toggle('hide');
-})  
+})
+*/

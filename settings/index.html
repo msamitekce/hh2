@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, 
     user-scalable=0">
@@ -12,41 +13,65 @@
 <body>
 
     <!-- Display Menu-->
-    <p id="displayDiv">Display</p>
-    <div class="form none" id="optionsDiv">
-        <label for="hhfinna">HH Finna</label>
-        <select class="optionSet" name="hhfinna" id="hhfinna">
-        </select>
-        <label for="helga">HELGA</label>
-        <select class="optionSet" name="helga" id="helga">
-        </select>
-        <label for="kide">Kide</label>
-        <select class="optionSet" name="kide" id="kide">
-        </select>
-        <label for="lukkarikone">Lukkarikone</label>
-        <select class="optionSet" name="lukkarikone" id="lukkarikone">
-        </select>
-        <label for="moodle">Moodle</label>
-        <select class="optionSet" name="moodle" id="moodle">
-        </select>
-        <label for="mynet">MyNet</label>
-        <select class="optionSet" name="mynet" id="mynet">
-        </select>
-        <label for="outlook">Outlook</label>
-        <select class="optionSet" name="outlook" id="outlook">
-        </select>
-        <label for="guide">Student Guide</label>
-        <select class="optionSet" name="guide" id="guide">
-        </select>
-        <label for="vdi">VDI</label>
-        <select class="optionSet" name="vdi" id="vdi">
-        </select>
-        <label for="jobteaser">Jobteaser</label>
-        <select class="optionSet" name="jobteaser" id="jobteaser">
-        </select>
+    <div id="wrapDisplayDiv">
+        <p class="hidingP" id="displayDiv">Display</p>
+        <div class="form containsDiv hide" id="optionsDiv">
+            <label for="calendar">Calendar</label>
+            <select class="optionSet" name="calendar" id="calendar">
+            </select>
+            <label for="hhfinna">HH Finna</label>
+            <select class="optionSet" name="hhfinna" id="hhfinna">
+            </select>
+            <label for="helga">HELGA</label>
+            <select class="optionSet" name="helga" id="helga">
+            </select>
+            <label for="kide">Kide</label>
+            <select class="optionSet" name="kide" id="kide">
+            </select>
+            <label for="lukkarikone">Lukkarikone</label>
+            <select class="optionSet" name="lukkarikone" id="lukkarikone">
+            </select>
+            <label for="menu">Menu</label>
+            <select class="optionSet" name="menu" id="menu">
+            </select>
+            <label for="moodle">Moodle</label>
+            <select class="optionSet" name="moodle" id="moodle">
+            </select>
+            <label for="mynet">MyNet</label>
+            <select class="optionSet" name="mynet" id="mynet">
+            </select>
+            <label for="outlook">Outlook</label>
+            <select class="optionSet" name="outlook" id="outlook">
+            </select>
+            <label for="guide">Student Guide</label>
+            <select class="optionSet" name="guide" id="guide">
+            </select>
+            <label for="vdi">VDI</label>
+            <select class="optionSet" name="vdi" id="vdi">
+            </select>
+            <label for="jobteaser">Jobteaser</label>
+            <select class="optionSet" name="jobteaser" id="jobteaser">
+            </select>
+        </div>
     </div>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, eos?</p>
+    <div id="wrapLukkariDiv">
+        <p class="hidingP">Lukkarikone Settings</p>
+        <div class="containsDiv hide">
+            <p>Go <a href="https://lukkarit.haaga-helia.fi/#" target="_blank">Lukkarikone</a> and add your courses to
+                the "Study Basket". Click "View schedule".
+                Click this <img src="https://lukkarit.haaga-helia.fi/images/bookmark-new.png" alt=""> icon and copy link
+                location then submit to here.</p>
+            <label for="lukkariLink">Lukkarikone Link</label>
+            <input type="text" id="lukkariLink">
+            <input type="submit" value="Add">
+        </div>
+    </div>
+    <div id="otherDiv">
+        <p class="hidingP">Other Settings</p>
+        <div class="containsDiv hide">
+            <input type="color">
+        </div>
+    </div>
     <script src="selectApp.js">
     </script>
 

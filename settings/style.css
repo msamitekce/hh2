@@ -1,45 +1,48 @@
-*{
-    box-sizing: border-box;
-    line-height: 1.3;
-    padding: 0;
-    margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+* {
+  box-sizing: border-box;
+  line-height: 1.3;
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
+.hidingP {
+  cursor: pointer;
+}
 
+/* optionsDiv settings */
+div {
+  user-select: none;
+}
 
-/* optionsDiv styling */
 .form {
-    display: grid;
-    grid-template-columns: 1fr 6fr 6fr 1fr;
-    grid-auto-rows: 5vh;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
+  display: grid;
+  grid-template-columns: 1fr 6fr 6fr 1fr;
+  grid-auto-rows: 5vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
 }
 
 label {
-    display: block;
-    grid-column: 2 / 3;
-    text-align: end;
-    margin-right: 10px;
+  display: block;
+  grid-column: 2 / 3;
+  text-align: end;
+  margin-right: 10px;
 }
 
 select {
-    grid-column: 3/4;
-    width: 50%;
-    height: 90%;
-    text-align: center;
-    font-size: 16px;
-    align-self: center;
-    margin: 5px 0 5px 0;
+  grid-column: 3/4;
+  width: 50%;
+  height: 90%;
+  text-align: center;
+  font-size: 16px;
+  align-self: center;
+  margin: 5px 0 5px 0;
 }
 
 /* optionsDiv trigger */
 .hide {
-    display: none;
-}
-
-select:active {
-    background-color: red;
+  display: none;
 }

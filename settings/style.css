@@ -40,7 +40,7 @@ ul {
   list-style: none;
 }
 
-li a,
+li a, li a:hover, li a:active, li a:visited,
 .myLink {
   color: #dbd8e3;
   padding: 0.6rem;
@@ -51,13 +51,14 @@ button {
   min-height: 2.3rem;
   max-height: 3rem;
   width: 90%;
-  max-width: 25rem;
+  max-width: 18rem;
   font-size: 1.1rem;
   margin: 0.5rem auto 0 auto;
   display: block;
   background-color: #5c5470;
   color: #dbd8e3;
   border: none;
+  cursor: pointer;
 }
 /* optionsDiv settings */
 div {
@@ -130,7 +131,7 @@ div {
   height: 7vh;
   min-height: 2rem;
   width: 90%;
-  max-width: 25rem;
+  max-width: 18rem;
   font-size: 1rem;
   margin: 0.5rem auto 0.5rem auto;
   display: block;
@@ -149,10 +150,6 @@ div {
   padding: 0.3rem;
 }
 
-/* hide class */
-.hide {
-  display: none;
-}
 
 @media only screen and (min-width: 800px) {
   html {
@@ -167,10 +164,20 @@ div {
     justify-self: center;
     grid-column: 2/3;
   }
+
+  ul, ol {
+    padding: 0 2rem 0 2rem;
+  }
 }
 
 @media only screen and (max-width: 250px) {
   ul {
     columns: 1;
   }
+}
+
+
+/* hide class */
+.hide {
+  display: none;
 }

@@ -4,8 +4,8 @@
 <head>
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, 
-    user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, 
+    user-scalable=5.0">
     <title>HH2 Settings</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,34 +13,40 @@
 <body>
 
     <!-- Display Menu-->
-    <div class="goback">
+    <div class="goBack">
         <a href="../">Back to main page</a>
     </div>
     <div>
-        <p class="hidingP">Links</p>
-        <div class="containsDiv hide">
+        <p class="titleP">Links</p>
+        <div class="contentDiv hide">
             <ul>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">HH Finna</a></li>
-                <li><a href="#">HELGA</a></li>
-                <li><a href="#">Jobteaser</a></li>
-                <li><a href="#">Kide</a></li>
-                <li><a href="#">Lukkarikone</a></li>
-                <li><a href="#">Moodle</a></li>
-                <li><a href="#">MyNet</a></li>
-                <li><a href="#">Outlook</a></li>
-                <li><a href="#">Student Guide</a></li>
-                <li><a href="#">Roivus</a></li>
-                <li><a href="#">VDI</a></li>
+                <li><a href="https://outlook.office.com/calendar/">Calendar</a></li>
+                <li><a href="https://haaga-helia.finna.fi/">HH Finna</a></li>
+                <li><a href="https://www.haaga-helia.fi/en">Haaga-Helia</a></li>
+                <li><a href="https://helga.fi/en/">HELGA</a></li>
+                <li><a href="https://haaga-helia.jobteaser.com/en/">Jobteaser</a></li>
+                <li><a href="https://kide.app/">Kide</a></li>
+                <li><a href="https://lukkarit.haaga-helia.fi/#">Lukkarikone</a></li>
+                <li><a href="https://hhmoodle.haaga-helia.fi/?userLang=en">Moodle</a></li>
+                <li><a href="https://hhmoodle.haaga-helia.fi/calendar/export.php">Moodle Calendar</a></li>
+                <li><a href="https://student.home.haaga-helia.fi/">MyNet</a></li>
+                <li><a href="http://mymail.haaga-helia.fi/">Outlook</a></li>
+                <li><a href="https://opinto-opas.haaga-helia.fi/en">Student Guide</a></li>
+                <li><a href="https://vdi-lab.cp.haaga-helia.fi/client/">Roivus</a></li>
+                <li><a href="https://vdi.haaga-helia.fi/">VDI</a></li>
             </ul>
         </div>
     </div>
     <div>
-        <p class="hidingP" id="mainPageLayout">Main Page Layout</p>
-        <div class="containsDiv hide">
+        <p class="titleP" id="mainPageLayout">Main Page Layout</p>
+        <div class="contentDiv hide">
             <div class="form">
                 <label for="calendar">Calendar</label>
                 <select class="optionSet" name="calendar" id="calendar">
+                </select>
+                <label for="haaga-helia">Haaga-Helia</label>
+                <select class="optionSet" name="haaga-helia" id="haaga-helia">
+                </select>
                 </select>
                 <label for="hhfinna">HH Finna</label>
                 <select class="optionSet" name="hhfinna" id="hhfinna">
@@ -84,8 +90,8 @@
         </div>
     </div>
     <div>
-        <p class="hidingP">Lukkarikone Save</p>
-        <div class="containsDiv hide lukkari">
+        <p class="titleP">Lukkarikone Save</p>
+        <div class="contentDiv hide lukkari">
             <ol>
                 <li>Go <a href="https://lukkarit.haaga-helia.fi/#" target="_blank">Lukkarikone</a></li>
                 <li>Add your courses to the "Study Basket"</li>
@@ -102,8 +108,8 @@
         </div>
     </div>
     <div>
-        <p class="hidingP">Theme</p>
-        <div class="containsDiv hide">
+        <p class="titleP">Theme</p>
+        <div class="contentDiv hide">
             <div class="theme">
 
                 <label for="theme">Select : </label>
@@ -118,16 +124,16 @@
         </div>
     </div>
     <div>
-        <p class="hidingP">Info</p>
-        <div class="containsDiv hide info">
+        <p class="titleP">Info</p>
+        <div class="contentDiv hide info">
             <p>This website made by <a class="myLink" target="_blank"
-                    href="http://www.samitekce.com">Sami&nbsp;Tekce</a>
-                for Haaga-Helia students. I am inspired by Tomas Kukk's <a class="myLink" href="https://www.hhapp.info"
+                    href="http://www.samitekce.com">Sami&nbsp;Tekce</a>.</p>
+            <p>I am inspired by Tomas Kukk's <a class="myLink" href="https://www.hhapp.info"
                     target="_blank">hhapp.info</a>.</p>
             <p>You can send feedback and suggestions to <span class="myLink" href="#">sami@samitekce.com</span></p>
         </div>
     </div>
-    <script src="selectApp.js">
+    <script src="app.js">
     </script>
 
 </body>

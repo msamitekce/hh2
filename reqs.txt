@@ -3,13 +3,28 @@ HH Finna
 HELGA
 Kide
 Lukkarikone
+Menu
 Moodle
 MyNet
 Outlook
+++Rovius
 Student Guide
 VDI
 Jobteaser
 
-
 %%%%%
 
+Themes:
+Dark 
+Light
+Ocean?
+Forest?
+
+language
+%%%%%
+
+todo
+-localdatabase object savings
+-reviewing and improvement 
+-styling
+-animations

@@ -142,8 +142,8 @@ div {
 }
 
 input {
-  height: 7vh;
-  min-height: 2rem;
+  height: 5vh;
+  min-height: 3rem;
   width: 90%;
   max-width: 18rem;
   font-size: 1rem;

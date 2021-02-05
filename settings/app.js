@@ -3,10 +3,11 @@ let optionSetCreation = document.querySelectorAll('.optionSet');
 optionSetCreation.forEach(element => {
     for (let i = 0; i < 7; i++) {
         let optionElement = document.createElement('option');
-        optionElement.setAttribute('value', i);
         if (i === 0) {
             optionElement.innerText = "None";
+            optionElement.setAttribute('value', 'hide');
         } else {
+            optionElement.setAttribute('value', i);
             optionElement.innerText = i;
         }
         element.appendChild(optionElement);
@@ -43,3 +44,17 @@ allLinks.forEach(link => {
 })
 
 document.querySelector('.goBack').querySelector('a').target = '_self';
+
+/* Set Layout Local Storage */
+
+let layoutButton = document.querySelector('#layoutButton');
+layoutButton.addEventListener('click', () => {
+
+    let layoutOrder = {};
+    document.querySelectorAll('.optionSet').forEach(options => {
+        layoutOrder[options.id] = options.value;
+    })
+
+    localStorage.setItem('layout', JSON.stringify(layoutOrder));
+    console.log(JSON.stringify(layoutOrder));
+})

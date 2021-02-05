@@ -121,6 +121,12 @@ div {
   width: 70%;
 }
 
+.info_menu {
+  margin: 0.6rem;
+  color: white;
+  padding-bottom: 1rem;
+}
+
 /* lukkarikone save */
 
 .lukkari ol {

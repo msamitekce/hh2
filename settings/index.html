@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="../favicon.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, 
     user-scalable=5.0">
@@ -21,9 +21,9 @@
         <div class="contentDiv hide">
             <ul>
                 <li><a href="https://outlook.office.com/calendar/">Calendar</a></li>
-                <li><a href="https://haaga-helia.finna.fi/">HH Finna</a></li>
                 <li><a href="https://www.haaga-helia.fi/en">Haaga-Helia</a></li>
                 <li><a href="https://helga.fi/en/">HELGA</a></li>
+                <li><a href="https://haaga-helia.finna.fi/">HH Finna</a></li>
                 <li><a href="https://haaga-helia.jobteaser.com/en/">Jobteaser</a></li>
                 <li><a href="https://kide.app/">Kide</a></li>
                 <li><a href="https://lukkarit.haaga-helia.fi/#">Lukkarikone</a></li>
@@ -40,6 +40,7 @@
     <div>
         <p class="titleP" id="mainPageLayout">Main Page Layout</p>
         <div class="contentDiv hide">
+            <p class="info_menu">Don't forget to add "Menu" item to layout. Otherwise you can reach to this page via hh2.fi/settings</p>
             <div class="form">
                 <label for="calendar">Calendar</label>
                 <select class="optionSet" name="calendar" id="calendar">
@@ -103,13 +104,13 @@
 
                 <input type="text" id="lukkariLink" placeholder="Copy the link">
 
-                <button type="submit">Save the link</button>
+                <button type="submit" onclick="addLukkariLink()">Save the link</button>
             </div>
         </div>
     </div>
     <div>
         <p class="titleP">Theme</p>
-        <div class="contentDiv hide">
+        <div style="display: none;" class="contentDiv hide">
             <div class="theme">
 
                 <label for="theme">Select : </label>
@@ -126,11 +127,7 @@
     <div>
         <p class="titleP">Info</p>
         <div class="contentDiv hide info">
-            <p>This website made by <a class="myLink" target="_blank"
-                    href="http://www.samitekce.com">Sami&nbsp;Tekce</a>.</p>
-            <p>I am inspired by Tomas Kukk's <a class="myLink" href="https://www.hhapp.info"
-                    target="_blank">hhapp.info</a>.</p>
-            <p>You can send feedback and suggestions to <span class="myLink" href="#">sami@samitekce.com</span></p>
+            <p>If you find any bug or want to give some feedback, please send email to <span style="user-select: text">bgm187@myy.haaga-helia.fi</span> </p>
         </div>
     </div>
     <script src="app.js">

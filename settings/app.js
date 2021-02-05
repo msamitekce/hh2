@@ -58,3 +58,10 @@ layoutButton.addEventListener('click', () => {
     localStorage.setItem('layout', JSON.stringify(layoutOrder));
     console.log(JSON.stringify(layoutOrder));
 })
+
+/* Lukkarikone Link Setup*/
+
+function addLukkariLink(){
+    let lukkariLink = document.querySelector('#lukkariLink').value;
+    localStorage.setItem('lukkariLink', JSON.stringify(lukkariLink));
+}

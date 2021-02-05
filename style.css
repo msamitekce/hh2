@@ -1,66 +1,135 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "area_1 area_2"
+    "area_3 area_4"
+    "area_5 area_6";
+  background-color: black;
 }
 
-body{
-    display: grid;
-    grid-template-rows: repeat(3, 33vh);
-    grid-template-columns: repeat(2, 50vw);
-    grid-template-areas: "area_1 area_2"
-                        "area_3 area_4"
-                        "area_5 area_6";
-    background-color: black;
+a {
+  display: grid;
+  height: 90%;
+  width: 100%;
+  text-align: center;
+  color: rgb(214, 214, 214);
+  padding: 0.1rem;
+  text-decoration: none;
+  overflow: hidden;
 }
 
-a{
-    display: grid;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 1rem;
-    text-decoration: none;
-    overflow: hidden;
+h2 {
+  align-self: flex-end;
+  font-size: 11vh;
 }
 
-h2{
-    font-size: 5.6rem;
-}
-.menu h2 {
-    font-size: 4rem;
-}
-p{
-    font-size: 1.4rem;
+p {
+  font-size: 1.2rem;
+  text-decoration: underline;
 }
 
+.area_1 {
+  grid-area: area_1;
+}
+
+.area_2 {
+  grid-area: area_2;
+}
+
+.area_3 {
+  grid-area: area_3;
+}
+
+.area_4 {
+  grid-area: area_4;
+}
+
+.area_5 {
+  grid-area: area_5;
+}
+
+.area_6 {
+  grid-area: area_6;
+}
 .area_hide {
-    display: none;
+  display: none;
 }
 
-.area_1{
-    grid-area: area_1;
+.menu h2 {
+  color: rgb(196, 194, 108);
+}
+.moodle h2 {
+  color: #ec7c1f;
+}
+.span1 {
+  color: #c9d510;
+}
+.span2 {
+  color: #00abce;
+}
+.calendar h2 {
+  color: #64ade6;
+}
+.span3 {
+  color: #2879b3;
+}
+.span4 {
+  color: #86b884;
+}
+.jobteaser h2 {
+  color: #47cb37;
+}
+.lukkarikone h2 {
+  color: #1e7b94;
+}
+.outlook h2 {
+  color: #016dbf;
+}
+.guide h2 {
+  color: #017ac9;
+}
+.roivus h2 {
+  color: #23adad;
+}
+.vdi h2 {
+  color: #a57ab7;
 }
 
-.area_2{
-    grid-area: area_2;
+.helga h2 {
+  color: #006887;
 }
 
-.area_3{
-    grid-area: area_3;
+.hhfinna h2 {
+  color: #0079C2;
 }
 
-.area_4{
-    grid-area: area_4;
+.kide h2 {
+  color: #5E35B1;
 }
 
-.area_5{
-    grid-area: area_5;
-}
-
-.area_6{
-    grid-area: area_6;
+@media only screen and (min-width: 600px) {
+  html {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
+  }
+  body {
+    grid-column: 2/3;
+    background-color: #000000;
+  }
 }

@@ -10,7 +10,7 @@ html {
   grid-template-columns: 10px auto 10px;
 }
 body {
-  background-color: #000000;
+  background-color: #070707;
   grid-column: 2/3;
   padding-bottom: 1rem;
 }
@@ -23,7 +23,7 @@ a:focus {
 .goBack {
   color: #e7dffd;
   cursor: pointer;
-  background-color: #160e2c;
+  background-color: #0c1c4b;
   padding: 0.4rem 0.4rem 0.4rem 1rem;
   margin: 1rem 0 0 0;
   font-size: 1.2rem;
@@ -43,9 +43,9 @@ li a:hover,
 li a:active,
 li a:visited,
 .myLink {
-  color: #efecf7;
+  color: #f4efff;
   padding: 0.1rem 0.6rem 0.1rem 0.6rem;
-  display: none;
+  display: block;
 }
 
 button {
@@ -56,18 +56,18 @@ button {
   max-width: 18rem;
   font-size: 1.1rem;
   margin: 0.5rem auto 0 auto;
-  display: none;
-  background-color: #221c2e;
-  color: #d5d0df;
+  background-color: #000000;
+  color: #cfe7ec;
   border: none;
   cursor: pointer;
+  display: block;
 }
 /* optionsDiv settings */
 div {
   user-select: none;
 }
 .contentDiv {
-  background-color: #504470;
+  background-color: #263544;
   padding: 1rem 0 1rem 0;
   display: block;
   height: auto;
@@ -100,19 +100,18 @@ div {
   text-align: end;
   font-size: 1rem;
   color: #dbd8e3;
-
+  display: block;
 }
 
 .form select,
 .theme select {
-  display: none;
   grid-column: 2/3;
   width: 70%;
   height: 90%;
   max-width: 7rem;
   text-align: center;
   font-size: 1rem;
-
+  display: block;
   align-self: center;
 }
 
@@ -129,7 +128,7 @@ div {
   color: #dbd8e3;
   list-style-position: inside;
   margin: 0 0.5rem 0 0.5rem;
-  display: none;
+  display: block;
 }
 
 .lukkari li {
@@ -143,8 +142,8 @@ input {
   max-width: 18rem;
   font-size: 1rem;
   margin: 0.5rem auto 0.5rem auto;
-  display: none;
   padding-left: 0.5rem;
+  display: block;
 }
 
 /* info */
@@ -158,6 +157,7 @@ input {
 }
 .myLink {
   padding: 0.3rem;
+  display: inline-block;
 }
 
 /* Media queries*/
@@ -195,6 +195,9 @@ input {
   padding: 0;
   opacity: 0.25;
   height: 0;
+}
+.hide * {
+  display: none;
 }
 
 .hide:first-child {

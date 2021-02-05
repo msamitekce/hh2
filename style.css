@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-rows: repeat(3, 33vh);
+    grid-template-columns: repeat(2, 50vw);
+    grid-template-areas: "area_1 area_2"
+                        "area_3 area_4"
+                        "area_5 area_6";
+    background-color: black;
+}
+
+a{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+h2{
+    font-size: 5.6rem;
+}
+.menu h2 {
+    font-size: 4rem;
+}
+p{
+    font-size: 1.4rem;
+}
+
+.hide {
+    display: none;
+}
+
+.area_1{
+    grid-area: area_1;
+}
+
+.area_2{
+    grid-area: area_2;
+}
+
+.area_3{
+    grid-area: area_3;
+}
+
+.area_4{
+    grid-area: area_4;
+}
+
+.area_5{
+    grid-area: area_5;
+}
+
+.area_6{
+    grid-area: area_6;
+}

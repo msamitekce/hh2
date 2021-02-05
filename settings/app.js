@@ -14,30 +14,25 @@ optionSetCreation.forEach(element => {
 });
 
 /* on click hiding and ui bug fixes*/
+
+let hiding = (e) => {
+    let targetId = e.target;
+    let changeClassList = targetId.nextElementSibling.classList;
+    if (changeClassList.contains('hide')) {
+        document.querySelectorAll('.contentDiv').forEach(x => {
+            x.classList.add('hide');
+        })
+        changeClassList.remove('hide');
+    } else {
+        changeClassList.add('hide');
+    }
+}
+
 let hideDiv = document.querySelectorAll('.titleP');
 hideDiv.forEach(divElement => {
-    divElement.addEventListener('click', () => {
-        let toHidden = divElement.nextElementSibling;
-        if (toHidden.classList.contains('hide')) {
-            toHidden.querySelectorAll('a, select, label, ol').forEach(oneLink => {
-                oneLink.style.display = 'inline-block';
-            })
-            document.querySelectorAll('button, p, input').forEach(aButton => {
-                aButton.style.display = 'block';
-            })
-            toHidden.classList.remove('hide');
-            divElement.classList.add('hidingPTransition');
-        } else {
-            toHidden.querySelectorAll('a,select,label, p, button, input').forEach(oneLink => {
-
-                oneLink.style.display = 'none';
-            })
-            toHidden.classList.add('hide');
-            divElement.classList.remove('hidingPTransition');
-
-        };
-    })
+    divElement.addEventListener('click', hiding)
 })
+
 
 /*Links*/
 

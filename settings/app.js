@@ -1,6 +1,7 @@
 let initialArea = JSON.parse(localStorage.getItem('layoutObject'));
-console.log(initialArea)
 
+let valuesArray = {};
+let sameValuesArray = {};
 
 let optionSetCreation = document.querySelectorAll('.optionSet');
 optionSetCreation.forEach(element => {
@@ -10,7 +11,6 @@ optionSetCreation.forEach(element => {
     }
 
 });
-
 
 function createOptionList(element) {
     for (let i = 0; i < 9; i++) {
@@ -24,15 +24,47 @@ function createOptionList(element) {
         }
         element.appendChild(optionElement);
     }
-    console.log(element);
+    setInitialOption(element);
 }
 
-function setInitialOption(element){
-    if(initialArea[element.id][1] === 'hide'){
+function setInitialOption(element) {
+    if (initialArea[element.id][1] === 'hide') {
         element.children[0].setAttribute('selected', true);
+    } else {
+        element.children[initialArea[element.id][1]].setAttribute('selected', true)
+    }
+
+    valuesArray[initialArea[element.id][0]] = initialArea[element.id][1];
+}
+/* valuesArray.push(initialArea[element.id][1]); */
+
+/* Same area controller */
+function isSame() {
+    let optionSet = document.querySelectorAll('.optionSet');
+    optionSet.forEach(w => {
+        w.addEventListener('change', e => sameControl(e))
+
+    })
+}
+isSame();
+function sameControl(e) {
+    for (let z = 1; z < 8; z++) {
+        let counter = 0;
+        let tempObj = {};
+        let sameArray = []
+        valuesArray.forEach(q => {
+            if (q.values == z) {
+                console.log(q.values)               
+                counter++;
+            }
+        })
+        if(counter>1){
+            sameArray.forEach(element => {
+                document.querySelector
+            });
+        }
     }
 }
-
 
 
 /* on click hiding and ui bug fixes*/
@@ -75,7 +107,6 @@ layoutButton.addEventListener('click', (e) => {
     let userSettings = document.querySelectorAll('.optionSet')
     userSettings.forEach(userSet => {
         itemLi[userSet.id][1] = userSet.value;
-        console.log(itemLi[userSet.id][1]);
     })
     localStorage.setItem('layoutObject', JSON.stringify(itemLi))
 })

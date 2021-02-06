@@ -1,7 +1,19 @@
+let initialArea = JSON.parse(localStorage.getItem('layoutObject'));
+console.log(initialArea)
+
 
 let optionSetCreation = document.querySelectorAll('.optionSet');
 optionSetCreation.forEach(element => {
-    for (let i = 0; i < 7; i++) {
+    createOptionList(element);
+    if (element.id === 'menu') {
+        document.querySelector('#menu').childNodes[1].setAttribute('disabled', true)
+    }
+
+});
+
+
+function createOptionList(element) {
+    for (let i = 0; i < 9; i++) {
         let optionElement = document.createElement('option');
         if (i === 0) {
             optionElement.innerText = "None";
@@ -12,7 +24,16 @@ optionSetCreation.forEach(element => {
         }
         element.appendChild(optionElement);
     }
-});
+    console.log(element);
+}
+
+function setInitialOption(element){
+    if(initialArea[element.id][1] === 'hide'){
+        element.children[0].setAttribute('selected', true);
+    }
+}
+
+
 
 /* on click hiding and ui bug fixes*/
 
@@ -48,20 +69,20 @@ document.querySelector('.goBack').querySelector('a').target = '_self';
 /* Set Layout Local Storage */
 
 let layoutButton = document.querySelector('#layoutButton');
-layoutButton.addEventListener('click', () => {
-
-    let layoutOrder = {};
-    document.querySelectorAll('.optionSet').forEach(options => {
-        layoutOrder[options.id] = options.value;
+layoutButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    let itemLi = JSON.parse(localStorage.getItem('layoutObject'))
+    let userSettings = document.querySelectorAll('.optionSet')
+    userSettings.forEach(userSet => {
+        itemLi[userSet.id][1] = userSet.value;
+        console.log(itemLi[userSet.id][1]);
     })
-
-    localStorage.setItem('layout', JSON.stringify(layoutOrder));
-    console.log(JSON.stringify(layoutOrder));
+    localStorage.setItem('layoutObject', JSON.stringify(itemLi))
 })
 
 /* Lukkarikone Link Setup*/
 
-function addLukkariLink(){
+function addLukkariLink() {
     let lukkariLink = document.querySelector('#lukkariLink').value;
     localStorage.setItem('lukkariLink', JSON.stringify(lukkariLink));
 }

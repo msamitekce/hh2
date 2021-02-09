@@ -126,6 +126,8 @@ function addLukkariLink() {
         }
             , 600);
 
+    } else {
+        document.querySelector('#lukkariLink').nextElementSibling.disabled = true;
     }
 }
 

@@ -171,6 +171,7 @@ input {
   color: var(--goback-text-color);
 }
 .info p {
+  color: var(--main-text-color);
   margin: 0 1rem 0 1rem;
 }
 .myLink {
@@ -226,6 +227,3 @@ input {
   background-color: var(--transition-color);
 }
 
-.toast {
-  background-color: #0b680b;
-}

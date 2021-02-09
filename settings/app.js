@@ -47,23 +47,23 @@ function isSame() {
     })
 }
 isSame();
+let copiedValuesArr = Object.assign({}, valuesArray);
 function sameControl(e) {
-    for (let z = 1; z < 8; z++) {
-        let counter = 0;
-        let tempObj = {};
-        let sameArray = []
-        valuesArray.forEach(q => {
-            if (q.values == z) {
-                console.log(q.values)               
-                counter++;
-            }
-        })
-        if(counter>1){
-            sameArray.forEach(element => {
-                document.querySelector
-            });
-        }
+    let filteredAr = Object.values(valuesArray).filter(ele => ele > 0);
+    copiedValuesArr[e.target.id] = e.target.value;
+    let filteredCop = Object.values(copiedValuesArr).filter(ele => ele > 0);
+    let unique = [...new Set(Object.values(copiedValuesArr))];
+    let filterUn = unique.filter(elem => elem > 0);
+    if (filterUn.length != filteredCop.length) {
+        layoutButton.style.background = 'red';
+        layoutButton.innerText = "Can't save"
+        layoutButton.disabled = true;
+    } else {
+        layoutButton.innerText = "Save"
+        layoutButton.style.background = '#000';
+        layoutButton.disabled = false;
     }
+
 }
 
 

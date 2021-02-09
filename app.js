@@ -53,7 +53,7 @@ if (layoutObject != null) {
         lukkarikone: ['lukkarikone', 'hide', 'L', 'Lukkarikone', ''],
         menu: ['menu', '1', '...', 'Menu', '/settings'],
         moodle: ['moodle', 'hide', 'M', 'Moodle', 'https://hhmoodle.haaga-helia.fi/?userLang=en'],
-        mynet: ['mynet', 'hide', '<span class="span1"M</span><span class="span2">y</span>', 'MyNet', 'https://student.home.haaga-helia.fi/'],
+        mynet: ['mynet', 'hide', '<span class="span1">M</span><span class="span2">y</span>', 'MyNet', 'https://student.home.haaga-helia.fi/'],
         outlook: ['outlook', 'hide', 'O', 'Outlook', 'https://outlook.office.com/calendar/view/month'],
         guide: ['guide', 'hide', 'SG', 'Student Guide', 'https://opinto-opas.haaga-helia.fi/en'],
         roivus: ['rovius', 'hide', 'R', 'Roivus', 'https://vdi-lab.cp.haaga-helia.fi/client/'],

@@ -1,3 +1,14 @@
+:root{
+  --main-bg-color: #070707;
+  --menu-close-bg-color: #0c1c4b;
+  --menu-close-text-color: #e7dffd;
+  --button-text-color: #cfe7ec;
+  --button-bg-color: #000;
+  --content-bg-color: #263544;
+  --main-text-color: #dbd8e3;
+  --transition-color: #40365e;
+}
+
 * {
   box-sizing: border-box;
   line-height: 1.3;
@@ -10,7 +21,7 @@ html {
   grid-template-columns: 10px auto 10px;
 }
 body {
-  background-color: #070707;
+  background-color: var(--main-bg-color);
   grid-column: 2/3;
   padding-bottom: 1rem;
 }
@@ -21,9 +32,9 @@ a:focus {
 }
 .titleP,
 .goBack {
-  color: #e7dffd;
+  color: var(--menu-close-text-color);
   cursor: pointer;
-  background-color: #0c1c4b;
+  background-color: var(--menu-close-bg-color);
   padding: 0.4rem 0.4rem 0.4rem 1rem;
   margin: 1rem 0 0 0;
   font-size: 1.2rem;
@@ -43,7 +54,7 @@ li a:hover,
 li a:active,
 li a:visited,
 .myLink {
-  color: #f4efff;
+  color: var(--button-text-color);
   padding: 0.1rem 0.6rem 0.1rem 0.6rem;
   display: block;
 }
@@ -56,18 +67,19 @@ button {
   max-width: 18rem;
   font-size: 1.1rem;
   margin: 0.5rem auto 0 auto;
-  background-color: #000000;
-  color: #cfe7ec;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
   border: none;
   cursor: pointer;
   display: block;
+  transition: all 0.6s linear;
 }
 /* optionsDiv settings */
 div {
   user-select: none;
 }
 .contentDiv {
-  background-color: #263544;
+  background-color: var(--content-bg-color);
   padding: 1rem 0 1rem 0;
   display: block;
   height: auto;
@@ -78,7 +90,7 @@ div {
 
 /* goback */
 .goBack a {
-  color: #dbd8e3;
+  color: var(--main-text-color);
   display: block;
   width: 100%;
 }
@@ -99,7 +111,7 @@ div {
   grid-column: 1 / 2;
   text-align: end;
   font-size: 1rem;
-  color: #dbd8e3;
+  color: var(--main-text-color);
   display: block;
 }
 
@@ -123,7 +135,7 @@ div {
 
 .info_menu {
   margin: 0.6rem;
-  color: white;
+  color: var(--main-text-color);
   padding-bottom: 1rem;
 }
 
@@ -131,7 +143,7 @@ div {
 
 .lukkari ol {
   font-size: 0.9rem;
-  color: #dbd8e3;
+  color: var(--main-text-color);
   list-style-position: inside;
   margin: 0 0.5rem 0 0.5rem;
   display: block;
@@ -156,7 +168,7 @@ input {
 
 .info {
   font-size: 0.8rem;
-  color: #dbd8e3;
+  color: var(--goback-text-color);
 }
 .info p {
   margin: 0 1rem 0 1rem;
@@ -176,7 +188,7 @@ input {
     grid-template-columns: minmax(70px, 140px) auto minmax(70px, 140px);
   }
   body {
-    background-color: #0f0d13;
+  
     width: 90%;
     max-width: 1200px;
     justify-self: center;
@@ -211,5 +223,9 @@ input {
 }
 
 .hidingPTransition {
-  background-color: #40365e;
+  background-color: var(--transition-color);
+}
+
+.toast {
+  background-color: #0b680b;
 }

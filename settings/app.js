@@ -55,13 +55,15 @@ function sameControl(e) {
     let unique = [...new Set(Object.values(copiedValuesArr))];
     let filterUn = unique.filter(elem => elem > 0);
     if (filterUn.length != filteredCop.length) {
-        layoutButton.style.background = 'red';
+        layoutButton.style.background = '#b03636';
         layoutButton.innerText = "Can't save"
         layoutButton.disabled = true;
+        layoutButton.style.cursor = 'auto'
     } else {
         layoutButton.innerText = "Save"
         layoutButton.style.background = '#000';
         layoutButton.disabled = false;
+        layoutButton.style.cursor = 'pointer'
     }
 
 }
@@ -108,12 +110,34 @@ layoutButton.addEventListener('click', (e) => {
     userSettings.forEach(userSet => {
         itemLi[userSet.id][1] = userSet.value;
     })
-    localStorage.setItem('layoutObject', JSON.stringify(itemLi))
+    localStorage.setItem('layoutObject', JSON.stringify(itemLi));
+    toastMsg(layoutButton);
 })
 
 /* Lukkarikone Link Setup*/
 
 function addLukkariLink() {
     let lukkariLink = document.querySelector('#lukkariLink').value;
-    localStorage.setItem('lukkariLink', JSON.stringify(lukkariLink));
+    if (lukkariLink != "") {
+        localStorage.setItem('lukkariLink', JSON.stringify(lukkariLink));
+        toastMsg(document.querySelector('#lukkariLink').nextElementSibling);
+        setTimeout(() => {
+            document.querySelector('#lukkariLink').value = "";
+        }
+            , 600);
+
+    }
 }
+
+function toastMsg(btn) {
+    let btnBgClr = btn.style.backgroundColor;
+    btn.innerText = 'Saved'
+    btn.style.backgroundColor = '#0b680b'
+
+    setTimeout(() => {
+        btn.innerText = 'Save'
+        btn.style.backgroundColor = btnBgClr;
+    }
+        , 800);
+}
+

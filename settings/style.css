@@ -60,9 +60,7 @@ li a:visited,
 }
 
 button {
-  height: 7vh;
-  min-height: 2.3rem;
-  max-height: 3rem;
+  height: 3rem;
   width: 50%;
   max-width: 18rem;
   font-size: 1.1rem;
@@ -154,8 +152,7 @@ div {
 }
 
 input {
-  height: 5vh;
-  min-height: 3rem;
+  height: 3rem;
   width: 90%;
   max-width: 18rem;
   font-size: 1rem;

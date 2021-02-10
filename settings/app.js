@@ -1,48 +1,58 @@
-let initialArea = JSON.parse(localStorage.getItem('layoutObj'));
-
+let initSet = JSON.parse(localStorage.getItem('layoutObj'));
 let valuesArray = {};
 let sameValuesArray = {};
-console.log(initialArea)
-let optionSetCreation = document.querySelectorAll('.optionSet');
-optionSetCreation.forEach(element => {
-    createOptionList(element);
-    console.log(element)
-    if (element.id === 'menu') {
+
+
+/* append option list for each main layout option*/
+
+let optSetElement = document.querySelectorAll('.optionSet');
+optSetElement.forEach(opt => {
+    crtOptList(opt);
+    if (opt.id === 'menu') {
         document.querySelector('#menu').childNodes[1].setAttribute('disabled', true)
     }
 
 });
 
-function createOptionList(element) {
+
+/* create the option list to be appended
+number of options is hard coded based on main layout grid*/
+
+function crtOptList(opt) {
     for (let i = 0; i < 9; i++) {
-        let optionElement = document.createElement('option');
+        let optElement = document.createElement('option');
         if (i === 0) {
-            optionElement.innerText = "None";
-            optionElement.setAttribute('value', 'hide');
+            optElement.innerText = "None";
+            optElement.setAttribute('value', 'hide');
         } else {
-            optionElement.setAttribute('value', i);
-            optionElement.innerText = i;
+            optElement.setAttribute('value', i);
+            optElement.innerText = i;
         }
-        element.appendChild(optionElement);
+        opt.appendChild(optElement);
     }
-    setInitialOption(element);
+    setInitOpt(opt);
 }
 
-function setInitialOption(element) {
-    if (initialArea[element.id][1] === 'hide') {
-        element.children[0].setAttribute('selected', true);
+/* gets each option's from layoutObj
+and displays saved layout area on option list  */
+
+function setInitOpt(opt) {
+    if (initSet[opt.id][1] === 'hide') {
+        opt.children[0].setAttribute('selected', true);
     } else {
-        element.children[initialArea[element.id][1]].setAttribute('selected', true)
+        opt.children[initSet[opt.id][1]].setAttribute('selected', true)
     }
 
-    valuesArray[initialArea[element.id][0]] = initialArea[element.id][1];
+
+
+    valuesArray[initSet[opt.id][0]] = initSet[opt.id][1];
 }
-/* valuesArray.push(initialArea[element.id][1]); */
 
 /* Same area controller */
 function isSame() {
     let optionSet = document.querySelectorAll('.optionSet');
     optionSet.forEach(w => {
+        
         w.addEventListener('change', e => sameControl(e))
 
     })

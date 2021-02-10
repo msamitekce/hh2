@@ -2,10 +2,11 @@ let initialArea = JSON.parse(localStorage.getItem('layoutObj'));
 
 let valuesArray = {};
 let sameValuesArray = {};
-
+console.log(initialArea)
 let optionSetCreation = document.querySelectorAll('.optionSet');
 optionSetCreation.forEach(element => {
     createOptionList(element);
+    console.log(element)
     if (element.id === 'menu') {
         document.querySelector('#menu').childNodes[1].setAttribute('disabled', true)
     }

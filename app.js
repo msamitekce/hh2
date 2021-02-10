@@ -1,5 +1,4 @@
 
-
 /* add new link option to the localdatabase layoutList as an object which has an array 
 1 is class name
 2 is area name
@@ -10,8 +9,7 @@
 let layoutObject = JSON.parse(localStorage.getItem('layoutObj'));
 let lukkariLink = JSON.parse(localStorage.getItem('lukkariLink'))
 
-
-if (layoutObject != null) {
+if (layoutObject != null && Object.keys(layoutObject).length == 15) {
     let a = (Object.entries(layoutObject))
     for (let i = 0; i < a.length; i++) {
         if (a[i][1][1] != "hide") {
@@ -53,8 +51,9 @@ if (layoutObject != null) {
         mynet: ['mynet', 'hide', '<span class="span1">M</span><span class="span2">y</span>', 'MyNet', 'https://student.home.haaga-helia.fi/'],
         outlook: ['outlook', 'hide', 'O', 'Outlook', 'http://mymail.haaga-helia.fi/'],
         guide: ['guide', 'hide', 'SG', 'Student Guide', 'https://opinto-opas.haaga-helia.fi/en'],
-        roivus: ['rovius', 'hide', 'R', 'Roivus', 'https://vdi-lab.cp.haaga-helia.fi/client/'],
+        rovius: ['rovius', 'hide', 'R', 'Rovius', 'https://vdi-lab.cp.haaga-helia.fi/client/'],
         vdi: ['vdi', 'hide', 'V', 'VDI', 'https://vdi.haaga-helia.fi/'],
+        viope: ['viope', 'hide', 'V', 'Viope', 'https://www.viope.com/'],
     }
     localStorage.setItem('layoutObj', JSON.stringify(layoutList));
     location.reload();

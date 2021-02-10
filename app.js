@@ -7,7 +7,7 @@
 4 is p text
 5 is link*/
 
-let layoutObject = JSON.parse(localStorage.getItem('layoutObject'));
+let layoutObject = JSON.parse(localStorage.getItem('layoutObj'));
 let lukkariLink = JSON.parse(localStorage.getItem('lukkariLink'))
 
 
@@ -56,7 +56,7 @@ if (layoutObject != null) {
         roivus: ['rovius', 'hide', 'R', 'Roivus', 'https://vdi-lab.cp.haaga-helia.fi/client/'],
         vdi: ['vdi', 'hide', 'V', 'VDI', 'https://vdi.haaga-helia.fi/'],
     }
-    localStorage.setItem('layoutObject', JSON.stringify(layoutList));
+    localStorage.setItem('layoutObj', JSON.stringify(layoutList));
     location.reload();
 }
 

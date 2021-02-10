@@ -1,4 +1,4 @@
-let initialArea = JSON.parse(localStorage.getItem('layoutObject'));
+let initialArea = JSON.parse(localStorage.getItem('layoutObj'));
 
 let valuesArray = {};
 let sameValuesArray = {};
@@ -105,12 +105,12 @@ document.querySelector('.goBack').querySelector('a').target = '_self';
 let layoutButton = document.querySelector('#layoutButton');
 layoutButton.addEventListener('click', (e) => {
     e.preventDefault();
-    let itemLi = JSON.parse(localStorage.getItem('layoutObject'))
+    let itemLi = JSON.parse(localStorage.getItem('layoutObj'))
     let userSettings = document.querySelectorAll('.optionSet')
     userSettings.forEach(userSet => {
         itemLi[userSet.id][1] = userSet.value;
     })
-    localStorage.setItem('layoutObject', JSON.stringify(itemLi));
+    localStorage.setItem('layoutObj', JSON.stringify(itemLi));
     toastMsg(layoutButton);
 })
 

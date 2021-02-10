@@ -51,7 +51,7 @@ if (layoutObject != null) {
         menu: ['menu', '1', '...', 'Menu', '/settings'],
         moodle: ['moodle', 'hide', 'M', 'Moodle', 'https://hhmoodle.haaga-helia.fi/?userLang=en'],
         mynet: ['mynet', 'hide', '<span class="span1">M</span><span class="span2">y</span>', 'MyNet', 'https://student.home.haaga-helia.fi/'],
-        outlook: ['outlook', 'hide', 'O', 'Outlook', 'https://outlook.office.com/calendar/view/month'],
+        outlook: ['outlook', 'hide', 'O', 'Outlook', 'http://mymail.haaga-helia.fi/'],
         guide: ['guide', 'hide', 'SG', 'Student Guide', 'https://opinto-opas.haaga-helia.fi/en'],
         roivus: ['rovius', 'hide', 'R', 'Roivus', 'https://vdi-lab.cp.haaga-helia.fi/client/'],
         vdi: ['vdi', 'hide', 'V', 'VDI', 'https://vdi.haaga-helia.fi/'],

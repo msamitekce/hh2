@@ -33,6 +33,7 @@ a {
   text-decoration: none;
   overflow: hidden;
   outline: 0;
+  cursor: pointer;
 }
 
 h2 {

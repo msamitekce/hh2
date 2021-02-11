@@ -1,4 +1,4 @@
-let layoutObject = JSON.parse(localStorage.getItem('layoutObj'));
+let layoutObject = JSON.parse(localStorage.getItem('layoutObj2'));
 let lukkariLink = JSON.parse(localStorage.getItem('lukkariLink'));
 
 if (layoutObject != null && Object.keys(layoutObject).length == 15) {
@@ -47,7 +47,7 @@ if (layoutObject != null && Object.keys(layoutObject).length == 15) {
         vdi: ['vdi', 'hide', 'V', 'VDI', 'https://vdi.haaga-helia.fi/'],
         viope: ['viope', 'hide', 'V', 'Viope', 'https://www.viope.com/'],
     }
-    localStorage.setItem('layoutObj', JSON.stringify(layoutList));
+    localStorage.setItem('layoutObj2', JSON.stringify(layoutList));
     location.reload();
 }
 

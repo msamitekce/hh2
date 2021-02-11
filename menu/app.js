@@ -1,4 +1,4 @@
-let layoutObj = JSON.parse(localStorage.getItem('layoutObj'));
+let layoutObj = JSON.parse(localStorage.getItem('layoutObj2'));
 
 let valuesArray = {};
 
@@ -172,7 +172,7 @@ function hideTitle(e) {
             layoutObj[opt.id][1] = opt.value;
         })
 
-        localStorage.setItem('layoutObj', JSON.stringify(layoutObj));
+        localStorage.setItem('layoutObj2', JSON.stringify(layoutObj));
 
         successTransition(layoutButton);
     })

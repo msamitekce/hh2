@@ -7,16 +7,17 @@ let valuesArray = {};
 
 let optSetElement = document.querySelectorAll('.optionSet');
 
-optSetElement.forEach(opt => {
+(function () {
+    optSetElement.forEach(opt => {
 
-    crtOptList(opt);
+        crtOptList(opt);
 
-    if (opt.id === 'menu') {
+        if (opt.id === 'menu') {
 
-        document.querySelector('#menu').childNodes[1].setAttribute('disabled', true)
-    }
-
-});
+            document.querySelector('#menu').childNodes[1].setAttribute('disabled', true)
+        }
+    })
+}());
 
 
 /* create the option list to be appended

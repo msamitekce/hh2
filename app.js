@@ -1,13 +1,5 @@
-
-/* add new link option to the localdatabase layoutList as an object which has an array 
-1 is class name
-2 is area name
-3 h2 text
-4 is p text
-5 is link*/
-
 let layoutObject = JSON.parse(localStorage.getItem('layoutObj'));
-let lukkariLink = JSON.parse(localStorage.getItem('lukkariLink'))
+let lukkariLink = JSON.parse(localStorage.getItem('lukkariLink'));
 
 if (layoutObject != null && Object.keys(layoutObject).length == 15) {
     let a = (Object.entries(layoutObject))

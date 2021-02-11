@@ -42,7 +42,8 @@ h2 {
 }
 
 p {
-  font-size: 0.9rem;
+  font-size: clamp(3vh,  0.9rem, 3.4vh);
+  
   text-decoration: underline;
 }
 
@@ -105,7 +106,7 @@ p {
   color: #47cb37;
 }
 .lukkarikone h2 {
-  color: #1e7b94;
+  color: #1C84A4;
 }
 .outlook h2 {
   color: #016dbf;
@@ -132,10 +133,14 @@ p {
   color: #5E35B1;
 }
 
-@media only screen and (min-width: 600px) {
+.viope h2 {
+  color: #34A8BC;
+}
+
+@media only screen and (min-width: 1025px) {
   html {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 2fr 1fr;
   }
   body {

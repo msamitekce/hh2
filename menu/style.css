@@ -185,6 +185,11 @@ input {
   display: inline-block;
 }
 
+
+.menu_info a {
+  color: #fff;
+}
+
 /* Media queries*/
 
 @media only screen and (min-width: 800px) {

@@ -38,7 +38,7 @@ if (layoutObject != null && Object.keys(layoutObject).length == 15) {
         jobteaser: ['jobteaser', 'hide', 'J', 'JobTeaser', 'https://haaga-helia.jobteaser.com/en/'],
         kide: ['kide', 'hide', 'K', 'Kide.app', 'https://kide.app/'],
         lukkarikone: ['lukkarikone', 'hide', 'L', 'Lukkarikone', ''],
-        menu: ['menu', '1', '...', 'Menu', '/settings'],
+        menu: ['menu', '1', '...', 'Menu', '/menu'],
         moodle: ['moodle', 'hide', 'M', 'Moodle', 'https://hhmoodle.haaga-helia.fi/?userLang=en'],
         mynet: ['mynet', 'hide', '<span class="span1">M</span><span class="span2">y</span>', 'MyNet', 'https://student.home.haaga-helia.fi/'],
         outlook: ['outlook', 'hide', 'O', 'Outlook', 'http://mymail.haaga-helia.fi/'],

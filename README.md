@@ -13,7 +13,7 @@ Currently this project is in experimental state. You may lose your saved setting
 Webpage uses browser local storage to keep customizations. Users need to save choices on every browser they use. If you delete your browsers "Offline Website Data" you need to set your peferences again.
 
 
-The main page has 2x4 grid for small screen sizes (width < 1025px>) and 4x2 for big screen sizes (width > 1024px) layout to keep everything simple. User can decide which links to be displayed and their position on the grid. 
+The main page has 2x4 grid for small screen sizes (width < 1025px) and 4x2 for big screen sizes (width > 1024px) layout to keep everything simple. User can decide which links to be displayed and their position on the grid. 
 
 During the first visit there is only **Menu** icon on the main page. This can be changed from **Menu > Main Page Layout**. You choose the position of any link based on the grid as:
 
@@ -37,7 +37,7 @@ Area 5  Area 6 Area 7  Area 8
 
 You can't choose same area for two different links. If you choose same area the button turns red and you can't save your settings. 
 
-The *Menu* link can't be hide.
+The *Menu* link can't be hidden.
 
 **Any area can be left empty.** 
 

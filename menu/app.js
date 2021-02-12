@@ -1,11 +1,9 @@
 let layoutObj = JSON.parse(localStorage.getItem('layoutObj2'));
 
-let valuesArray = {};
+let valuesObject = {};
 
 
 /* append option list for each main layout option*/
-
-
 
 function optionList() {
 
@@ -33,13 +31,8 @@ function optionList() {
 
             document.querySelector('#menu').childNodes[0].setAttribute('disabled', true)
         }
-
     })
-
-
-
-
-};
+}
 
 
 /* create the option list to be appended
@@ -80,6 +73,8 @@ function setInitOpt(opt) {
 
         opt.children[layoutObj[opt.id][1]].setAttribute('selected', true)
     }
+
+    valuesObject[layoutObj[opt.id][0]] = layoutObj[opt.id][1];
 }
 
 /* add change listener for each option
@@ -92,14 +87,14 @@ function optEventFunction() {
 
     optSetElement.forEach(opt => {
 
-        valuesArray[layoutObj[opt.id][0]] = layoutObj[opt.id][1];
+        valuesObject[layoutObj[opt.id][0]] = layoutObj[opt.id][1];
 
         opt.addEventListener('change', anElmnt => {
 
             isSame(anElmnt)
         })
     })
-};
+}
 
 
 /* checks conflicts by filtering unique area values 
@@ -108,10 +103,10 @@ then compares length*/
 
 
 function isSame(anElmnt) {
-    let copiedValuesArr = Object.assign({}, valuesArray);
-    copiedValuesArr[anElmnt.target.id] = anElmnt.target.value;
 
-    let filteredCpy = Object.values(copiedValuesArr).filter(x => x > 0);
+    valuesObject[anElmnt.target.id] = anElmnt.target.value;
+
+    let filteredCpy = Object.values(valuesObject).filter(x => x > 0);
 
     let uniqueCpy = [...new Set(Object.values(filteredCpy))];
 
@@ -144,7 +139,7 @@ function hideTitleFunction() {
 
         divElement.addEventListener('click', hideTitle)
     })
-};
+}
 
 /* 'hide' class has display:none */
 
@@ -180,7 +175,7 @@ function linkFunction() {
     })
 
     document.querySelector('.goBack').querySelector('a').target = '_self';
-};
+}
 
 
 
@@ -203,7 +198,7 @@ function layoutSaveFunction() {
 
         successTransition(layoutButton);
     })
-};
+}
 
 
 /* lukkarikone link save*/
@@ -225,7 +220,7 @@ function linksaveFunction() {
                 800);
         }
     })
-};
+}
 
 
 /* visual feedback after successful save */

@@ -10,7 +10,7 @@ Currently this project is in experimental state. You may lose your saved setting
 
 ## Usage
 
-Webpage uses browser local storage to keep customizations. Users need to save choices on every browser they use. If you delete your browsers "Offline Website Data" you need to set your peferences again.
+The webpage uses browser local storage to keep customizations. Users need to save choices on every browser they use. If you delete your browsers "Offline Website Data" you need to set your peferences again.
 
 
 The main page has 2x4 grid for small screen sizes (width < 1025px) and 4x2 for big screen sizes (width > 1024px) layout to keep everything simple. User can decide which links to be displayed and their position on the grid. 
@@ -71,7 +71,5 @@ I can't test all possible different scenarios alone, if you have experienced som
 
 
 sami.tekce@myy.haaga-helia.fi
-
-Thanks
 
 Sami Tekce

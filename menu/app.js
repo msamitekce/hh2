@@ -122,6 +122,8 @@ let titleElement = document.querySelectorAll('.titleP');
     })
 }());
 
+/* 'hide' class has display:none */
+
 function hideTitle(e) {
 
     let targetClass = e.target.nextElementSibling.classList;

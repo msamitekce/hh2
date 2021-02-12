@@ -31,7 +31,7 @@ body {
   padding-bottom: 1rem;
 }
 a:active,
-a:focus {
+a:focus, button {
   outline: 0;
   border: none;
 }

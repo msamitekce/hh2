@@ -5,19 +5,41 @@ let valuesArray = {};
 
 /* append option list for each main layout option*/
 
-let optSetElement = document.querySelectorAll('.optionSet');
 
-(function () {
-    optSetElement.forEach(opt => {
 
-        crtOptList(opt);
+function optionList() {
 
-        if (opt.id === 'menu') {
+    let objKeys = Object.keys(layoutObj);
+
+    const labelElement = document.createElement('label')
+    const inputElement = document.createElement('select')
+
+    objKeys.map(objEach => {
+        const labelElement = document.createElement('label');
+        const inputElement = document.createElement('select');
+
+        labelElement.htmlFor = layoutObj[objEach][0];
+        labelElement.innerHTML = layoutObj[objEach][3];
+
+        inputElement.id = layoutObj[objEach][0];
+        inputElement.name = layoutObj[objEach][0];
+        inputElement.className = 'optionSet';
+
+        crtOptList(inputElement);
+        document.querySelector('.form').appendChild(labelElement);
+        document.querySelector('.form').appendChild(inputElement);
+
+        if (layoutObj[objEach][0] === 'menu') {
 
             document.querySelector('#menu').childNodes[1].setAttribute('disabled', true)
         }
+
     })
-}());
+
+
+
+
+};
 
 
 /* create the option list to be appended
@@ -60,11 +82,13 @@ function setInitOpt(opt) {
     }
 }
 
-
 /* add change listener for each option
 add current area value object then call check function for conflict*/
 
-(function () {
+function optEventFunction() {
+
+
+    let optSetElement = document.querySelectorAll('.optionSet');
 
     optSetElement.forEach(opt => {
 
@@ -75,16 +99,16 @@ add current area value object then call check function for conflict*/
             isSame(anElmnt)
         })
     })
-}());
+};
 
 
 /* checks conflicts by filtering unique area values 
 then compares length*/
 
-let copiedValuesArr = Object.assign({}, valuesArray);
+
 
 function isSame(anElmnt) {
-
+    let copiedValuesArr = Object.assign({}, valuesArray);
     copiedValuesArr[anElmnt.target.id] = anElmnt.target.value;
 
     let filteredCpy = Object.values(copiedValuesArr).filter(x => x > 0);
@@ -114,13 +138,13 @@ function isSame(anElmnt) {
 
 let titleElement = document.querySelectorAll('.titleP');
 
-(function () {
+function hideTitleFunction() {
 
     titleElement.forEach(divElement => {
 
         divElement.addEventListener('click', hideTitle)
     })
-}());
+};
 
 /* 'hide' class has display:none */
 
@@ -145,7 +169,7 @@ function hideTitle(e) {
 
 /* links target settings */
 
-(function () {
+function linkFunction() {
 
     let linkElements = document.querySelectorAll('a');
 
@@ -156,16 +180,16 @@ function hideTitle(e) {
     })
 
     document.querySelector('.goBack').querySelector('a').target = '_self';
-}());
+};
 
 
 
 /* layout save */
 
-(function () {
+function layoutSaveFunction() {
 
     let layoutButton = document.querySelector('#layoutButton');
-
+    let optSetElement = document.querySelectorAll('.optionSet');
     layoutButton.addEventListener('click', (e) => {
 
         e.preventDefault();
@@ -179,12 +203,12 @@ function hideTitle(e) {
 
         successTransition(layoutButton);
     })
-}());
+};
 
 
 /* lukkarikone link save*/
 
-(function () {
+function linksaveFunction() {
     let lukkariInput = document.querySelector('#lukkariLink');
 
     lukkariInput.nextElementSibling.addEventListener('click', () => {
@@ -201,7 +225,7 @@ function hideTitle(e) {
                 800);
         }
     })
-}());
+};
 
 
 /* visual feedback after successful save */
@@ -221,3 +245,10 @@ function successTransition(btn) {
         , 800);
 }
 
+
+optionList();
+optEventFunction();
+hideTitleFunction();
+layoutSaveFunction();
+linksaveFunction();
+linkFunction()

@@ -31,7 +31,7 @@ function optionList() {
 
         if (layoutObj[objEach][0] === 'menu') {
 
-            document.querySelector('#menu').childNodes[1].setAttribute('disabled', true)
+            document.querySelector('#menu').childNodes[0].setAttribute('disabled', true)
         }
 
     })

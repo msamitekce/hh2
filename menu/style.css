@@ -1,11 +1,11 @@
 :root {
   --main-bg-color: #000000;
-  --menu-close-bg-color: #0c2469;
+  --menu-close-bg-color: #1a3586;
   --menu-close-text-color: #e6e5e7;
-  --button-text-color: #000000;
-  --button-bg-color: #95b6c0;
+  --button-text-color: #ffffff;
+  --button-bg-color: #6f23ad;
   --link-text-color: #ffffff;
-  --content-bg-color: #272f36;
+  --content-bg-color: #132433;
   --main-text-color: #dbd8e3;
   --transition-color: #40365e;
 }

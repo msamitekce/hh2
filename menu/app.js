@@ -122,7 +122,7 @@ function isSame(anElmnt) {
     } else {
 
         layoutButton.disabled = false;
-        layoutButton.style.background = '#95b6c0';
+        layoutButton.style.background = '#6f23ad';
         layoutButton.style.cursor = 'pointer'
         layoutButton.innerText = "Save"
     }

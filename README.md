@@ -51,7 +51,7 @@ Click on "View schedule"
 Click on the star icon
 Copy the "link location" then submit to here.
 ```
-**Note:** There are is a blue colored "Link" on the Lukkarikone pop-up page (when you click on the star icon). On mobile, you can long press on "Link" text then choose "Copy link location", "Copy link address" or similar option depending on your browser. There is the text version of the link but it is very hard to copy on mobile.  
+**Note:** There are is a blue colored "Link" on the Lukkarikone pop-up page (when you click on the star icon). On mobile, you can long press on "Link" text then choose "Copy link location", "Copy link address" or similar option depending on your browser. There is a plain text version of the link but it is very hard to copy on mobile.  
 
 
 ### Links
@@ -71,5 +71,3 @@ I can't test all possible different scenarios alone, if you have experienced som
 
 
 sami.tekce@myy.haaga-helia.fi
-
-Sami Tekce

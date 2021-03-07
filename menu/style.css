@@ -86,7 +86,6 @@ button {
 /* optionsDiv settings */
 div {
   user-select: none;
-  
 }
 .contentDiv {
   padding: 0.6rem 0.6rem;
@@ -126,7 +125,7 @@ div {
 
 .form select {
   grid-column: 2/3;
-  width: 70%;
+  width: 60%;
   height: 90%;
   max-width: 7rem;
   text-align: center;
@@ -220,7 +219,7 @@ input {
     grid-template-columns: 1fr;
   }
   body {
-    width: 60%;
+    width: 80%;
     max-width: 1200px;
     justify-self: center;
   }
@@ -239,6 +238,28 @@ input {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  .form {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 0.4rem;
+  }
+
+  .form select {
+    width: 60%;
+  }
+  .form label:nth-child(4n+1){
+    grid-column: 1/2;
+  }
+  .form label:nth-child(4n+3){
+    grid-column: 3/4;
+  }
+  .form select:nth-child(4n+2){
+    grid-column: 2/3;
+  }
+  .form select:nth-child(4n+4){
+    grid-column: 4/5;
+  }
+
 }
 
 @media only screen and (max-width: 250px) {

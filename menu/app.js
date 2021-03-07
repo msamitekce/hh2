@@ -2,6 +2,8 @@ let layoutObj = JSON.parse(localStorage.getItem('layoutObj2'));
 
 let valuesObject = {};
 
+let buttonColor = getComputedStyle(document.documentElement).getPropertyValue('--button-text-color');
+let buttonBgColor = getComputedStyle(document.documentElement).getPropertyValue('--button-text-color');
 
 /* append option list for each main layout option*/
 
@@ -103,9 +105,6 @@ then compares length*/
 
 
 function isSame(anElmnt) {
-
-    let buttonColor = getComputedStyle(document.documentElement).getPropertyValue('--button-text-color');
-    let buttonBgColor = getComputedStyle(document.documentElement).getPropertyValue('--button-text-color');
 
     valuesObject[anElmnt.target.id] = anElmnt.target.value;
 

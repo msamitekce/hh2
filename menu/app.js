@@ -104,6 +104,9 @@ then compares length*/
 
 function isSame(anElmnt) {
 
+    let buttonColor = getComputedStyle(document.documentElement).getPropertyValue('--button-text-color');
+    let buttonBgColor = getComputedStyle(document.documentElement).getPropertyValue('--button-text-color');
+
     valuesObject[anElmnt.target.id] = anElmnt.target.value;
 
     let filteredCpy = Object.values(valuesObject).filter(x => x > 0);
@@ -118,12 +121,14 @@ function isSame(anElmnt) {
         layoutButton.disabled = true;
         layoutButton.style.background = '#b03636';
         layoutButton.style.cursor = 'auto'
+        layoutButton.style.color = buttonColor;
         layoutButton.innerText = "Can't save"
     } else {
 
         layoutButton.disabled = false;
-        layoutButton.style.background = '#6f23ad';
+        layoutButton.style.background = buttonColor;
         layoutButton.style.cursor = 'pointer'
+        layoutButton.style.color = '#000'
         layoutButton.innerText = "Save"
     }
 }

@@ -1,9 +1,7 @@
 :root {
   --main-bg-color: #000000;
-  --menu-close-bg-color: #1a3586;
   --menu-close-text-color: #e6e5e7;
   --button-text-color: #ffffff;
-  --button-bg-color: #6f23ad;
   --link-text-color: #ffffff;
   --content-bg-color: #132433;
   --main-text-color: #dbd8e3;
@@ -23,14 +21,14 @@
 html {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: 1rem auto 1rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
   background-color: var(--main-bg-color);
-  grid-column: 2/3;
   padding-bottom: 1rem;
-  max-width: 1400px;
 }
 a:active,
 a:focus,
@@ -42,11 +40,12 @@ button {
 .goBack {
   color: var(--menu-close-text-color);
   cursor: pointer;
-  background-color: var(--menu-close-bg-color);
   padding: 0.4rem 2rem;
   margin: 1.2rem 0 0 0;
   font-size: 1.5rem;
   transition: 0.3s all ease;
+  border-bottom: 2px solid #fff;
+  max-width: 100vw;
 }
 
 ul {
@@ -77,8 +76,6 @@ button {
   max-width: 16rem;
   font-size: 1.3rem;
   margin: 0.7rem auto 0 auto;
-  background-color: var(--button-bg-color);
-  color: var(--button-text-color);
   border: none;
   cursor: pointer;
   display: block;
@@ -89,10 +86,10 @@ button {
 /* optionsDiv settings */
 div {
   user-select: none;
+  
 }
 .contentDiv {
-  background-color: var(--content-bg-color);
-  padding: 1rem 0.5rem;
+  padding: 0.6rem 0.6rem;
   display: block;
   height: auto;
   transition: 0.3s all ease;
@@ -103,6 +100,7 @@ div {
 /* goback */
 .goBack a {
   color: var(--main-text-color);
+  text-decoration: none;
   display: block;
   width: 100%;
 }
@@ -219,13 +217,12 @@ input {
     display: grid;
     width: 100vw;
     overflow-x: hidden;
-    grid-template-columns: minmax(70px, 140px) auto minmax(70px, 140px);
+    grid-template-columns: 1fr;
   }
   body {
-    width: 90%;
+    width: 60%;
     max-width: 1200px;
     justify-self: center;
-    grid-column: 2/3;
   }
 
   ul,
